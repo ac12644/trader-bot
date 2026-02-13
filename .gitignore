@@ -1,0 +1,15 @@
+data/raw/
+data/processed/
+logs/
+__pycache__/
+*.pyc
+.venv/
+.env
+*.egg-info/
+dist/
+.ruff_cache/
+.mypy_cache/
+.pytest_cache/
+positions.json
+firebase-debug.log
+brainstorming.md

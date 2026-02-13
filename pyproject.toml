@@ -1,0 +1,33 @@
+[project]
+name = "trader"
+version = "0.1.0"
+description = "Crypto futures day trading bot - Phase 1: Backtesting Engine"
+requires-python = ">=3.11"
+dependencies = [
+    "ccxt>=4.0",
+    "numpy>=1.26",
+    "polars>=1.0",
+    "pandas>=2.2",
+    "pyyaml>=6.0",
+    "structlog>=24.0",
+    "scipy>=1.14",
+    "python-dateutil>=2.9",
+    "python-dotenv>=1.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0",
+    "ruff>=0.5",
+]
+
+[project.scripts]
+backtest = "trader.main:main"
+live = "trader.live.runner:main"
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I"]
